@@ -1,0 +1,408 @@
+/* import fonts */
+@font-face {
+    font-family: BeauRivage;
+    src: url("fonts/beau rivage.ttf")
+}
+@font-face {
+    font-family: BebasNeue;
+    src: url("fonts/bebas neue.ttf")
+}
+@font-face {
+    font-family: kameron;
+    src: url("fonts/kameron｜regular.ttf");
+    font-weight: normal
+}
+@font-face {
+    font-family: kameron;
+    src: url("fonts/kameron｜bold.ttf");
+    font-weight: bold
+}
+
+/* ----------------COMPONENTS---------------- */
+html {
+    font-size: 62.5%
+}
+
+header {
+    background-color: #F2E9E1;
+    width: 100%;
+    height: 80px;
+    /* fix to top */
+    top: 0;
+    position: fixed;
+    left: 0;     /* gets rid of small white space */
+    /* applies shadow */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    /* title & button align */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+header.landing {
+    justify-content: center
+}
+
+footer {
+    background-color: #F2E9E1;
+    width: 100%;
+    height: 80px;
+    /* sets border styles */
+    border-style: solid;
+    border-color: #332217;
+    border-width: 2px;
+    /* fix to bottom */
+    position: fixed;
+    bottom: 0;
+    left: 0;     /* gets rid of small white space */
+    padding-right: 20px /* sets minimum padding on left & right */
+}
+
+h2 {
+    font-family: BeauRivage;
+    font-size: 60px;
+    text-align: center;
+    color: #332217;
+    margin: 0;      /* gets rid of extra space on top & bottom */
+    font-weight: normal     /* otherwise it's bold */
+}
+
+div.legend p {
+    font-family: BebasNeue;
+    font-size: 25px;
+}
+
+/* styling across legend labels */
+#legends {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* styling in a single legend label */
+div.legend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px
+}
+
+/* page transition in effect */
+@keyframes PageIn {
+    from {
+        opacity: 0;
+        tranform: rotateX(-30deg)
+    } to {
+        opacity: 1;
+        transform: rotateX(0)
+    }
+}
+html {
+    animation: PageIn 700ms
+}
+
+a {
+    text-decoration: none;
+}
+
+/* link states */
+#logo:hover {
+    color: #37ABDC
+}
+#logo:visited {
+    color: #332217
+}
+
+/* ----------------LANDING PAGE---------------- */
+
+#overlay {
+    background-color: #7F5539;
+    opacity: 0.85;  
+    /* gets rid of small white space on left and top */
+    left: 0;
+    top: 0;
+    /* sets dimensions and overlay */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+ }
+
+ #overlay-circle {
+    background-color: #332217;
+    position: absolute;
+    z-index: 2;
+    /* div becomes circle */
+    border-radius: 50%;
+    width: 448px;
+    height: 448px;
+    text-align: center      /* centers text block */
+ }
+
+ body {
+    /* using flex to set circle to center of page */
+    height: 100vh;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    margin: 0
+ }
+
+ #overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* horizontally centers block of text */
+    /* vertically centers block of text */
+    justify-content: center;
+    height: 100%
+ }
+
+ p.card-label {
+    font-family: BeauRivage;
+    font-size: 40px;
+    font-weight: normal;
+    color: #FFFFFF;
+    line-height: 86.5%;
+    margin: 0;      /* gets rid of weird margins */
+
+ }
+
+ p.paragraph {
+    font-family: Kameron;
+    font-size: 16px;
+    color: #F8F9F6;
+    line-height: 153.7%;
+    margin-top: 35px;          /* adjusts spacing between paragraph & heading */
+ }
+
+ .text-highlight.blue {
+    color: #37ABDC
+ }
+ .text-highlight.red {
+    color: #F94144
+ }
+
+#entry {
+    width: 126px;
+    height: 42px;
+    background-color: #F9C74F;
+    color: #000000;
+    font-family: Kameron;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;       /* gets rid of weird shadow that comes with */
+    margin-top: 25px;       /* adjusts spacing between button & paragraph */
+}
+
+#entry:hover {
+    background-color: #37ABDC
+}
+
+/* ----------------HOMEPAGE---------------- */
+main {
+    width: 100%;
+    height: calc(100% - 160px + 1.39vw);     /* 160px = header + footer */
+    top: 80px;
+    background-color: #F2E9E1;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    background-color:#332217;
+    /* sets grid layout */
+    display: grid;
+    grid-template-columns: repeat(5, 272px);    /* 5 columns, each with 272px as width */
+    gap: 1.39vw;    /* 1.39vw = (on mockup) 20px / 1440px */
+    overflow: scroll    /* otherwise canvas doesn't stretch */
+}
+
+div.card {
+    background-color: #37a8dc;
+    width: 97%;
+    aspect-ratio: 1/1;      /* each grid is square */
+    /* vertically centers content */
+    display: flex;
+    justify-content: center;
+}
+
+div.card-content {
+    display: none
+}
+
+
+div.card:hover .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+p.language-name {
+    font-family: BeauRivage;
+    font-size: 50px;
+    color: white;
+    white-space: nowrap;
+    margin: 0   /* gets rid of extra spacing on top & bottom */
+}
+
+p.speaker-num {
+    font-family: BebasNeue;
+    font-size: 40px;
+    color: #332217;
+    margin-top: 24px;
+    margin-bottom: 54px
+}
+
+p.countries {
+    font-family: BeauRivage;
+    font-size: 25px;
+    color: white;
+    white-space: nowrap;
+    margin: 0;   /* gets rid of extra spacing on top & bottom */
+}
+
+@-moz-keyframes text-scroll {
+    0%   { -moz-transform: translateX(-100%); }
+    100% { -moz-transform: translateX(100%); }
+   }
+@-webkit-keyframes text-scroll {
+    0%   { -webkit-transform: translateX(-100%); }
+    100% { -webkit-transform: translateX(100%); }
+   }
+@keyframes text-scroll {
+    0%   { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+   }
+
+/* 2 refresh icons */
+svg.refresh {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.refresh.invisible {
+    visibility: hidden;
+}
+
+/* ----------------LANGUAGE PAGE---------------- */
+#language-details-title h1 {
+    font-family: BeauRivage
+}
+
+#bullet-list {
+    margin-top: 25px
+}
+
+li.bullet-list-item {
+    font-family: kameron;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 153.7%;
+}
+
+#language-details {
+    background-color: #F2E9E1;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    right: 0;
+    z-index: 3;
+    top: 0;
+    box-shadow: -4px 0px 10px rgba(0,0,0,0.2);
+    visibility: hidden;
+    /* centers content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* slide out */
+    transition-duration: 0.7s
+}
+
+span.close {
+    top: 7%;
+    left: 53%;
+    position: fixed;
+}
+
+div.language-details-content {
+    width: 70%;     /* adjusts padding */
+    margin-top: -100px
+}
+
+button.dropdown {
+    font-family: BebasNeue;
+    font-size: 25px;
+    width: fit-content;
+    height: 47px;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    padding: 20px;
+    border: none;
+    /* flex stuff */
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    justify-content: space-around;
+}
+
+button.dropdown span {
+    display: flex
+}
+
+#popup {
+    width: fit-content;
+    max-width: 70%;
+    background-color: #FBF9F6;
+    padding: 15px;
+    visibility: hidden;
+}
+
+#popup p {
+    font-family: Kameron;
+    font-size: 16px;
+    margin: 0;
+}
+
+#status-bar {
+    width: 100%;
+    overflow: visible;
+}
+
+.bar {
+    fill: #E6CCB2;
+}
+
+.bar.short {
+    fill: #332217
+}
+
+#status-bar text {
+    font-family: BebasNeue;
+    font-size: 20px;
+    fill: #7F5539;
+}
+
+#status-bar text.highlight {
+    fill: #332217
+}
+
+
+#language-details-title h1 {
+    font-family: BeauRivage;
+    font-size: 7rem;
+    font-weight: normal;
+    margin: 0;
+    white-space: nowrap;
+}
+

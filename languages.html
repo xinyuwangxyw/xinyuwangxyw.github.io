@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Endangered Languages</title>
+        
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <svg class="refresh" onclick="refreshPage()" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.6466 36.6458C15.0824 38.3899 6.52665 33.8959 3.30263 25.9636C0.355094 18.7171 2.66834 10.5849 8.77848 5.83357L8.15657 9.92346C8.0745 10.4637 8.45727 10.9669 9.01161 11.0474C9.0622 11.0549 9.11208 11.0584 9.1616 11.0584C9.65615 11.0584 10.0888 10.7049 10.1638 10.2131L11.1323 3.83502C11.1719 3.5758 11.1033 3.31106 10.9438 3.10016C10.7835 2.88926 10.5437 2.74946 10.278 2.71081L3.74229 1.76816C3.19114 1.69049 2.6722 2.06155 2.59043 2.60243C2.50871 3.14331 2.89183 3.64591 3.44546 3.72632L7.484 4.30862C0.703142 9.60175 -1.85932 18.6394 1.41668 26.6937C4.48729 34.2487 11.9011 39 19.9494 39C21.3074 39 22.685 38.8643 24.0607 38.5844C24.6091 38.4726 24.961 37.9486 24.8468 37.4136C24.7322 36.8789 24.1955 36.5334 23.6468 36.6466L23.6466 36.6458ZM36.5553 35.2624L32.532 34.6811C39.3015 29.388 41.8572 20.3557 38.5824 12.304C34.9918 3.47806 25.4708 -1.52303 15.9409 0.414777C15.3926 0.526265 15.0406 1.05058 15.1548 1.58559C15.2691 2.1206 15.804 2.46508 16.3548 2.35256C24.9168 0.612242 33.4711 5.10525 36.696 13.0339C39.6446 20.2831 37.3321 28.417 31.2209 33.1683L31.8442 29.0653C31.9263 28.5244 31.5435 28.0212 30.9892 27.941C30.4338 27.862 29.9201 28.2344 29.8373 28.775L28.8687 35.1512C28.8291 35.4112 28.8977 35.6752 29.0573 35.8861C29.2175 36.097 29.4574 36.2368 29.7231 36.2755L36.2573 37.2195C36.3079 37.2271 36.3578 37.2306 36.4073 37.2306C36.9019 37.2306 37.3345 36.8771 37.4095 36.3853C37.4923 35.8454 37.1091 35.3421 36.5555 35.2621L36.5553 35.2624Z" fill="#332217"/>
+            </svg>
+            <a href="index.html"><h2>Endangered Languages</h2></a>
+            <svg class="refresh invisible" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.6466 36.6458C15.0824 38.3899 6.52665 33.8959 3.30263 25.9636C0.355094 18.7171 2.66834 10.5849 8.77848 5.83357L8.15657 9.92346C8.0745 10.4637 8.45727 10.9669 9.01161 11.0474C9.0622 11.0549 9.11208 11.0584 9.1616 11.0584C9.65615 11.0584 10.0888 10.7049 10.1638 10.2131L11.1323 3.83502C11.1719 3.5758 11.1033 3.31106 10.9438 3.10016C10.7835 2.88926 10.5437 2.74946 10.278 2.71081L3.74229 1.76816C3.19114 1.69049 2.6722 2.06155 2.59043 2.60243C2.50871 3.14331 2.89183 3.64591 3.44546 3.72632L7.484 4.30862C0.703142 9.60175 -1.85932 18.6394 1.41668 26.6937C4.48729 34.2487 11.9011 39 19.9494 39C21.3074 39 22.685 38.8643 24.0607 38.5844C24.6091 38.4726 24.961 37.9486 24.8468 37.4136C24.7322 36.8789 24.1955 36.5334 23.6468 36.6466L23.6466 36.6458ZM36.5553 35.2624L32.532 34.6811C39.3015 29.388 41.8572 20.3557 38.5824 12.304C34.9918 3.47806 25.4708 -1.52303 15.9409 0.414777C15.3926 0.526265 15.0406 1.05058 15.1548 1.58559C15.2691 2.1206 15.804 2.46508 16.3548 2.35256C24.9168 0.612242 33.4711 5.10525 36.696 13.0339C39.6446 20.2831 37.3321 28.417 31.2209 33.1683L31.8442 29.0653C31.9263 28.5244 31.5435 28.0212 30.9892 27.941C30.4338 27.862 29.9201 28.2344 29.8373 28.775L28.8687 35.1512C28.8291 35.4112 28.8977 35.6752 29.0573 35.8861C29.2175 36.097 29.4574 36.2368 29.7231 36.2755L36.2573 37.2195C36.3079 37.2271 36.3578 37.2306 36.4073 37.2306C36.9019 37.2306 37.3345 36.8771 37.4095 36.3853C37.4923 35.8454 37.1091 35.3421 36.5555 35.2621L36.5553 35.2624Z" fill="#332217"/>
+            </svg>
+        </header>
+        <main>
+            <div id="canvas"></div>
+            <div id="language-details"> 
+                <!-- <div class="language-details-content">
+                    <div id="language-details-title">
+                        <div id='popup'>
+                            <p></p>
+                        </div>
+                        <button class="dropdown">
+                            <span><svg style="margin-bottom: 2px" width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.167879 0.152627C0.0612259 0.242595 0.000858291 0.36497 2.28666e-05 0.492914C-0.00137141 0.621104 0.0592765 0.744304 0.167879 0.8332L9.59374 8.85769C9.69927 8.94872 9.84315 9 9.99343 9C10.1437 9 10.2876 8.94872 10.3931 8.85769L19.8208 0.833201C19.9327 0.744062 19.9974 0.620029 19.9999 0.489572C20.0024 0.359009 19.9428 0.233313 19.8343 0.14096C19.726 0.0487342 19.5782 -0.0021828 19.425 7.17885e-05C19.2717 0.00220827 19.1261 0.0572815 19.0213 0.152591L9.99343 7.83676L0.967665 0.152591C0.861849 0.0619084 0.71797 0.0109884 0.567823 0.0109884C0.417812 0.0109884 0.273933 0.0619083 0.168125 0.152591L0.167879 0.152627Z" fill="white"/></svg></span>
+                        </button>
+                        <h1>South Italian</h1> 
+                    </div>
+                    <svg id="status-bar" height="8rem"></svg>
+                    <ul id="bullet-list">
+                        <li class="bullet-list-item"><b>Also known as: </b>Neapolitan, Neapolitan-Calabrese, неаполитанский; неаполитанско-калабрийский, italien-du-sud, napolitano-calabrés</li> 
+                        <li class="bullet-list-item"><b>Where it's spoken: </b>Campania, Lucania (Basilicata), Abruzzi (Abruzzo), Molise, northern Calabria, northern and central Apulia (Puglia), southern Lazio and Marche as well as easternmost Umbria</li> 
+                        <li class="bullet-list-item"><b>Sources: </b>Ludwig Paul: Zazaki: Grammatik und Versuch einer Dialektologie. Beiträge zur Iranistik 18; Wiesbaden: Reichert, 1998. http://www.ethnologue.com/show_language.asp?code=zza http://www.zazaki.de/englisch/index.htm</li> 
+                    </ul>
+                </div> -->
+            </div>
+        </main>
+        <footer>
+            <div id="legends">
+                <div class="legend">
+                    <svg class="legend-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#F94144"/>
+                    </svg>
+                    <p>EXTINCT</p>
+                </div>
+
+                <div class="legend">
+                    <svg class="legend-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#F3722C"/>
+                    </svg>
+                    <p>CRITICALLY ENDANGERED</p>
+                </div>
+
+                <div class="legend">
+                    <svg class="legend-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#F9C74F"/>
+                    </svg>
+                    <p>SEVERELY ENDANGERED</p>
+                </div>
+
+                <div class="legend">
+                    <svg class="legend-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#90BE6D"/>
+                    </svg>
+                    <p>DEFINITELY ENDANGERED</p>
+                </div>
+
+                <div class="legend">
+                    <svg class="legend-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#37ABDC"/>
+                    </svg>
+                    <p>VULNERABLE</p>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

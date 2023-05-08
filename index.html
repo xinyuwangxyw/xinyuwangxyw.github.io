@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Endangered Languages</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="overlay-circle">
+            <div id="overlay-content">
+                <p class="card-label">Endangered<br>Languages</p>
+                <p class="paragraph">There are around <span class="text-highlight blue">7000</span> languages still in use today.<br>More than <span class="text-highlight red">2000</span> of them are endangered.</p>
+                <a href="languages.html"><button id="entry" type="button">EXPLORE</button></a>
+            </div>
+        </div>
+        
+        <div id="overlay"></div>
+        
+        <header class="landing">
+            <h2>Endangered Languages</h2>
+        </header>
+        <main>
+            <svg id="canvas"></svg>
+        </main>
+        <footer>
+            <div id="legends">
+                <div class="legend">
+                    <svg class="legend-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#F94144"/>
+                    </svg>
+                    <p>EXTINCT</p>
+                </div>
+
+                <div class="legend">
+                    <svg class="legend-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#F3722C"/>
+                    </svg>
+                    <p>CRITICALLY ENDANGERED</p>
+                </div>
+
+                <div class="legend">
+                    <svg class="legend-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#F9C74F"/>
+                    </svg>
+                    <p>SEVERELY ENDANGERED</p>
+                </div>
+
+                <div class="legend">
+                    <svg class="legend-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#90BE6D"/>
+                    </svg>
+                    <p>DEFINITELY ENDANGERED</p>
+                </div>
+
+                <div class="legend">
+                    <svg class="legend-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#37ABDC"/>
+                    </svg>
+                    <p>VULNERABLE</p>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
